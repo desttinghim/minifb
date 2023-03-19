@@ -81,7 +81,7 @@ pub fn build(b: *std.Build) void {
             }
         },
         else => |t| {
-            _ = b.addLog("Unsupported target {}", .{t});
+            std.log.err("Unsupported target {}", .{t});
         },
     }
 }
